@@ -2,12 +2,11 @@
 * Clipboard Formatting Tool
   A Clipboard Formatting Tool.
 
-  [[https://github.com/combofish/clipboard-formatting-tool 
-    ][file:Usage.png]]
-
 ** 功能
 
-   这是一个剪贴板内容自动格式化工具，它会监听剪切板内的文字内容，并会自动进行格式化（`去掉不正常的换行`, `拼接英文连词` e.g.），再复制回剪切板。
+   这是一个剪贴板内容自动格式化工具，它会监听剪切板内的文字内容，并会自动进行格式化（`去掉不正常的换行`, `拼接句尾英文连词` e.g.），再复制回剪切板。
+
+   [[https://github.com/combofish/clipboard-formatting-tool/blob/main/Usage.png][file:Usage.png]]
 
 ** 作者的应用场景
 

@@ -41,8 +41,15 @@ void Widget::timer_update() {
 
   QString ct;
   const QMimeData *mimeData = clipboard->mimeData();
+  if (mimeData->hasImage()){
+      // 不处理图片
+      return;
+  }
   if (mimeData->hasText()) {
     ct = mimeData->text();
+
+    // 不处理文件或目录的复制操作
+    if(ct.startsWith("file://")) return;
   }
   // QString ct = clipboard->text();
 
@@ -89,7 +96,7 @@ void Widget::format_string(QString &ori_str, QString &f_str) {
       ss << s << "\n";
     }
   }
-  ss << std::endl;
+  // ss << std::endl;
 
   // std::cout<<"After formatted : "<<ss.str();
   f_str = QString::fromStdString(ss.str());
