@@ -10,7 +10,7 @@
 
 ** 运行环境
 
-   Linux with qt5. ~Does not work properly on MS system~
+   Linux with Qt5. ~Does not work properly on MS system~
 
 ** 作者的应用场景
 
