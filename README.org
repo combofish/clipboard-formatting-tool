@@ -8,6 +8,10 @@
 
    [[https://github.com/combofish/clipboard-formatting-tool/blob/main/Usage.png][file:Usage.png]]
 
+** 运行环境
+
+   Linux with qt5. ~Does not work properly on MS system~
+
 ** 作者的应用场景
 
    复制英文文献时，会多出换行符，在进行后续操作时特别不方便，平时打开这个工具，即可搞定。
