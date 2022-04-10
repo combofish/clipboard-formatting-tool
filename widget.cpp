@@ -41,15 +41,16 @@ void Widget::timer_update() {
 
   QString ct;
   const QMimeData *mimeData = clipboard->mimeData();
-  if (mimeData->hasImage()){
-      // 不处理图片
-      return;
+  if (mimeData->hasImage()) {
+    // 不处理图片
+    return;
   }
   if (mimeData->hasText()) {
     ct = mimeData->text();
 
     // 不处理文件或目录的复制操作
-    if(ct.startsWith("file://")) return;
+    if (ct.startsWith("file://"))
+      return;
   }
   // QString ct = clipboard->text();
 
@@ -83,20 +84,27 @@ void Widget::format_string(QString &ori_str, QString &f_str) {
   split(tmp_str, '\n', vstr);
 
   std::stringstream ss;
-  for (auto &s : vstr) {
-    if (s.size() >= 1) {
-      if (s.back() == '-') {
-        ss << s;
-      } else if (s.back() == ';' || s.back() == '.') {
-        ss << s << "\n";
+  if (vstr.size() > 1) {
+    // 有多行数据
+    for (auto it = vstr.begin(); it != vstr.end() - 1; it++) {
+      auto s = *it;
+
+      if (s.size() >= 1) {
+        if (s.back() == '-') {
+          ss << s;
+        } else if (s.back() == ';' || s.back() == '.') {
+          ss << s << "\n";
+        } else {
+          ss << s << " ";
+        }
       } else {
-        ss << s << " ";
+        ss << s << "\n";
       }
-    } else {
-      ss << s << "\n";
     }
   }
-  // ss << std::endl;
+
+  // 处理最后一行数据
+  ss << vstr.back();
 
   // std::cout<<"After formatted : "<<ss.str();
   f_str = QString::fromStdString(ss.str());
