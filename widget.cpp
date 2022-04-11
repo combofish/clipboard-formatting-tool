@@ -2,6 +2,7 @@
 #include "ui_widget.h"
 #include <QString>
 #include <QTimer>
+#include <QShortcut>
 
 #include <iostream>
 #include <sstream>

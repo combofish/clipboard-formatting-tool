@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="rc.qrc">
+    <normaloff>:/images/m-格式化文字.png</normaloff>:/images/m-格式化文字.png</iconset>
+  </property>
   <widget class="QTextEdit" name="formatted_text">
    <property name="geometry">
     <rect>
@@ -60,6 +64,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="rc.qrc"/>
+ </resources>
  <connections/>
 </ui>
