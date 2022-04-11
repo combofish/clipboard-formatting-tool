@@ -8,9 +8,14 @@
 
    [[https://github.com/combofish/clipboard-formatting-tool/blob/main/Usage.png][file:Usage.png]]
 
-** 运行环境
+** 编译环境
 
-   Linux with Qt5. ~Does not work properly on MS system~
+   - Linux with Qt5.
+   - Ms Windows with Qt5. 
+
+** 直接使用
+
+  如果在 Windows 平台，可以在这里[[https://pan.baidu.com/s/1Ios5cx87AD-QnmumHhDq2Q][下载]]（8mh8），一个用 ~Windows MSVC 2017 64~ 编译好的软件。
 
 ** 作者的应用场景
 
