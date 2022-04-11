@@ -11,7 +11,7 @@
 ** 编译环境
 
    - Linux with Qt5.
-   - Ms Windows with Qt5. 
+   - MS Windows with Qt5. 
 
 ** 直接使用
 
