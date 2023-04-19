@@ -8,32 +8,33 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class Widget;
+    class Widget;
 }
 QT_END_NAMESPACE
 
 class Widget : public QWidget {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-  Widget(QWidget *parent = nullptr);
-  ~Widget();
-  void format_string(QString &, QString &);
+    Widget(QWidget *parent = nullptr);
 
-private slots:
-  void on_checkbox_enable_formatting_stateChanged(int arg1);
-
-  void on_checkBox_auto_copy_stateChanged(int arg1);
-
-  void timer_update();
+    ~Widget();
 
 private:
-  Ui::Widget *ui;
-  QTimer *timer;
-  QClipboard *clipboard;
+    void format_string(QString &, QString &);
 
-  QString origin_str;
-  QString formatted_str;
+private
+    slots:
+            void text_changed();
+
+    void CreateSystemTrayIcon();
+
+private:
+    Ui::Widget *ui;
+    QClipboard *clipboard;
+
+    QString origin_str;
+    QString formatted_str;
 };
 
 #endif // WIDGET_H

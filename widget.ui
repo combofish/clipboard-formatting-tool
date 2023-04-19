@@ -63,6 +63,19 @@
     <string>Auto Copy</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="hide_btn">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>0</y>
+     <width>88</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>hide</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="rc.qrc"/>
